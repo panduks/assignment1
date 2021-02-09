@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.5">
+<style>
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  margin: 5;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image:url('grid.jpg');
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: rgb(17, 16, 16);
+}
+
+.containerTab {
+  padding: 25px;
+  color: rgb(10, 0, 0);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.closebtn {
+  float: right;
+  color: rgb(7, 7, 7);
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div style="text-align:center">
+  <h2>Expanding Grid</h2>
+  <marquee>Click here the below Box</marquee>
+</div>
+
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:gray;">
+    Sundar Pichai
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:rgb(51, 41, 41);">
+    Digital marketing
+
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:yellowgreen;">
+    Amazon Web Services
+  </div>
+</div>
+
+<div id="b1" class="containerTab" style="display:none;background:rgb(94, 99, 94)">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Sundar Pichai</h2>
+  <p>Pichai worked in engineering and product management at Applied Materials and in management consulting at McKinsey & Company.
+   Pichai joined Google in 2004, where he led the product management and innovation efforts for a suite of Google's
+    client software products, including Google Chrome and Chrome OS, as well as being largely responsible for Google Drive. 
+    He went on to oversee the development of other applications such as Gmail and Google Maps. 
+    On November 19, 2009, Pichai gave a demonstration of Chrome OS; the Chromebook was released for trial and testing in 2011, 
+    and released to the public in 2012.</p>
+    <a href="https://en.wikipedia.org/wiki/Sundar_Pichai#Early_life_and_education">click here more details about Sundar Pichai</a>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:rgb(191, 218, 119)">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2> Digital marketing</h2>
+  <p>The development of digital marketing is inseparable from technology development. One of the first key events happened in 1971, 
+      when Ray Tomlinson sent the first email, and his technology set the platform to allow people to send and receive files through 
+      different machines.[8] However, the more recognizable period as being the start of Digital Marketing is 1990 as this was where
+       the Archie search engine was created as an index for FTP sites. </p>
+       <a href="https://en.wikipedia.org/wiki/Digital_marketing#History">click the link more deatils about digital Digital_marketing#History</a>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:rgb(127, 168, 187)">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Amazon Web Services</h2>
+  <p>The AWS platform was launched in July 2002.[5] In its early stages, the platform consisted of only a few disparate tools and 
+      services. Then in late 2003, the AWS concept was publicly reformulated when Chris Pinkham and Benjamin Black presented a paper
+       describing a vision for Amazon's retail computing infrastructure that was completely standardized, completely automated, and 
+       would rely extensively on web services for services such as storage and would draw on internal work already underway. </p>
+       <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services#History">click here more details about Amazon_Web_Services#History</a>
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
+</html> 
